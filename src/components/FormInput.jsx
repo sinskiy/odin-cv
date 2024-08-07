@@ -19,7 +19,7 @@ export default function FormInput({
     <div className="form-input">
       <label htmlFor={id}>
         {label}
-        {required && (
+        {CvState === "editing" && required && (
           <span>
             <strong aria-label="required">*</strong>
           </span>

@@ -1,10 +1,12 @@
 :root {
-  --background: white;
-  --text: black;
-  --primary: greenyellow;
-  --on-primary: black;
-  --outline: black;
-  --error: red;
+  --background: #f9faef;
+  --surface: #eeefe3;
+  --text: #1a1c16;
+  --text-variation: #44483d;
+  --primary: #4c662b;
+  --on-primary: #ffffff;
+  --outline: #75796c;
+  --error: #ba1a1a;
 
   --rounded: 9999px;
   --rounded-card: 1rem;
@@ -27,15 +29,18 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  background-color: var(--background);
+  color: var(--text);
 }
 button,
 input {
   font: inherit;
+  color: inherit;
 }
 
 button {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   border: none;
 
   border-radius: var(--rounded);
@@ -65,4 +70,16 @@ fieldset {
   border: 0;
 
   font-size: 0.875rem;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --background: #12140e;
+    --surface: #1e201a;
+    --text: #e2e3d8;
+    --text-variation: #c5c8ba;
+    --primary: #b1d18a;
+    --on-primary: #1f3701;
+    --error: #ffb4ab;
+  }
 }
