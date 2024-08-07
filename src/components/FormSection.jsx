@@ -7,7 +7,7 @@ export default function FormSection({ title, legendText, children }) {
   const [sectionDisplayed, setSectionDisplayed] = useState(true);
   const legendDisplayed = CvState === "editing" && legendText;
   return (
-    <section style={{ marginBottom: "4rem" }}>
+    <section style={{ marginBottom: sectionDisplayed ? "4rem" : 0 }}>
       <header
         style={{
           display: "flex",
