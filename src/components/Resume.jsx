@@ -22,11 +22,7 @@ export default function Resume({ title, additional, work, education }) {
               <p>
                 <MonthYear time={job.start} /> - <MonthYear time={job.end} />
               </p>
-              <ul className="responsibilities">
-                {job.responsibilities.map((responsibility) => (
-                  <li>{responsibility}</li>
-                ))}
-              </ul>
+              <p>{job.description}</p>
             </li>
           ))}
         </ul>

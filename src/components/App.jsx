@@ -18,18 +18,14 @@ export default function App() {
           {
             title: "web developer",
             company: "Spherical",
-            responsibilities: ["Did that", "and that"],
+            description: "Hello world. I did a lot, swear by my life.",
             start: new Date("January 5, 2024"),
             end: "present",
           },
           {
             title: "web engineer",
             company: "Square",
-            responsibilities: [
-              "Did some things",
-              "and more things",
-              "even more",
-            ],
+            description: "Hello world. I did a lot, swear by my life.",
             start: new Date("September 1, 2023"),
             end: new Date("September 1, 2024"),
           },
