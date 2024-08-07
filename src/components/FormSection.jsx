@@ -3,6 +3,7 @@ import { CvStateContext } from "../CvStateContext";
 
 export default function FormSection({
   title,
+  displayTitle = true,
   legendText,
   children,
   action = "toggle",
@@ -14,7 +15,7 @@ export default function FormSection({
   return (
     <>
       {sectionDisplayed && (
-        <section className={title.replace(" ", "-")}>
+        <article className={title.replace(" ", "-")}>
           <header
             style={{
               display: "flex",
@@ -22,9 +23,13 @@ export default function FormSection({
               marginBottom: legendDisplayed ? "0" : "1rem",
             }}
           >
-            <h2>{sectionDisplayed && title}</h2>
+            <h2 className={!displayTitle && "hidden-title"}>
+              {sectionDisplayed && displayTitle && title}
+            </h2>
             {action === "delete" && (
-              <button onClick={() => setSectionDisplayed(false)}>delete</button>
+              <button onClick={() => setSectionDisplayed(false)}>
+                delete the next
+              </button>
             )}
           </header>
           <fieldset
@@ -37,7 +42,7 @@ export default function FormSection({
             )}
             {children}
           </fieldset>
-        </section>
+        </article>
       )}
     </>
   );

@@ -32,6 +32,8 @@
   background-color: var(--surface);
   outline: 1px solid var(--outline);
   border-radius: var(--rounded-card);
+
+  min-width: 0;
 }
 .form-input input:focus {
   outline: 2px solid var(--primary);
