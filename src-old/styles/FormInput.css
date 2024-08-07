@@ -1,0 +1,40 @@
+[aria-label="required"] {
+  color: var(--error);
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+
+  margin-bottom: 1rem;
+}
+
+.form-input p {
+  font-size: 1.5rem;
+}
+
+.form-input label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+
+  color: var(--text-variation);
+}
+
+.form-input input {
+  border: none;
+  padding-left: 1.5rem;
+  height: 3rem;
+
+  font-size: 1.5rem;
+
+  background-color: var(--surface);
+  outline: 1px solid var(--outline);
+  border-radius: var(--rounded-card);
+
+  min-width: 0;
+}
+.form-input input:focus {
+  outline: 2px solid var(--primary);
+}
