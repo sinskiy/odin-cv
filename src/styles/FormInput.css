@@ -1,0 +1,28 @@
+[aria-label="required"] {
+  color: var(--error);
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.form-input label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.form-input input {
+  border: none;
+  padding-left: 1.5rem;
+  height: 3rem;
+
+  font-size: 1.5rem;
+
+  outline: 1px solid var(--outline);
+  border-radius: var(--rounded-card);
+}
+.forminput input:focus {
+  outline: 2px solid var(--primary);
+}

@@ -16,7 +16,6 @@ export default function MainForm() {
         e.preventDefault();
         setCvState(CvState === "editing" ? "viewing" : "editing");
       }}
-      className={CvState}
     >
       <CvStateContext.Provider value={CvState}>
         <GeneralInformation />
