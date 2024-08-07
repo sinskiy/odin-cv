@@ -2,11 +2,12 @@ import { useState } from "react";
 import FormSection from "./FormSection";
 
 export default function Experiences({ title, legendText, children }) {
-  const [length, setLength] = useState(1);
+  const [length, setLength] = useState(0);
+  console.log(length);
   return (
     <>
       <section>
-        <h2>{title}</h2>
+        {length > 0 && <h2>{title}</h2>}
         {Array(length)
           .fill(1)
           .map((section, i) => (
@@ -15,6 +16,7 @@ export default function Experiences({ title, legendText, children }) {
               title={title}
               displayTitle={false}
               legendText={legendText}
+              setLength={setLength}
               action="delete"
             >
               {children}

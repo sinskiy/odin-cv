@@ -7,6 +7,7 @@ export default function FormSection({
   legendText,
   children,
   action = "toggle",
+  setLength,
 }) {
   const CvState = useContext(CvStateContext);
 
@@ -27,7 +28,12 @@ export default function FormSection({
               {sectionDisplayed && displayTitle && title}
             </h2>
             {action === "delete" && (
-              <button onClick={() => setSectionDisplayed(false)}>
+              <button
+                onClick={() => {
+                  setSectionDisplayed(false);
+                  setLength && setLength((length) => length - 1);
+                }}
+              >
                 delete the next
               </button>
             )}
