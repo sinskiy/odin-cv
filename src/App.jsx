@@ -1,7 +1,12 @@
 import "./App.css";
+import MainForm from "./MainForm";
 
 function App() {
-  return <>hello world</>;
+  return (
+    <main>
+      <MainForm />
+    </main>
+  );
 }
 
 export default App;
