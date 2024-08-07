@@ -1,0 +1,60 @@
+.resume {
+  flex-grow: 2;
+
+  padding: 2rem;
+
+  background-color: white;
+  color: black;
+}
+
+.resume h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.resume .additional {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* TODO: calculate with JS to make always the same amount of items on each row */
+.resume .additional li {
+  width: calc(50% - 1rem);
+}
+
+.resume section {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+}
+.resume section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.resume section h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.resume .work-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.resume .work-list .company {
+  font-weight: 500;
+}
+
+.resume time {
+  font-weight: 400;
+  color: dimgray;
+}
+
+.resume .responsibilities {
+  list-style: circle;
+  padding-left: 2.5rem;
+}

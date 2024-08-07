@@ -37,6 +37,10 @@ input {
   font: inherit;
   color: inherit;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
 
 button {
   width: fit-content;
@@ -75,6 +79,10 @@ fieldset {
   border: 0;
 
   font-size: 0.875rem;
+}
+
+.a4 {
+  aspect-ratio: 100 / 141;
 }
 
 @media screen and (prefers-color-scheme: dark) {
