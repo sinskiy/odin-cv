@@ -24,7 +24,7 @@ export default function FormSection({ title, legendText, children }) {
           id={title}
         />
       </header>
-      <fieldset style={{ display: sectionDisplayed ? "block" : "flex" }}>
+      <fieldset style={{ display: sectionDisplayed ? "block" : "none" }}>
         {legendDisplayed && (
           <legend style={{ marginBottom: "1rem" }}>{legendText}</legend>
         )}
