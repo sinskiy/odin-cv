@@ -7,8 +7,8 @@ export default function PracticalExperience() {
       <FormInput id="company-name" label="company name" placeholder="Google" />
       <FormInput id="position-title" label="position title" placeholder="CEO" />
       <FormInput id="responsibilities" label="main responsibilities" />
-      <FormInput id="start-data" type="data" label="worked from" />
-      <FormInput id="end-data" type="data" label="worked until" />
+      <FormInput id="start-date" type="date" label="worked from" />
+      <FormInput id="end-date" type="date" label="worked until" />
     </FormSection>
   );
 }

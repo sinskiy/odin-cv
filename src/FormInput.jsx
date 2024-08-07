@@ -12,7 +12,7 @@ export default function FormInput({
   const CvState = useContext(CvStateContext);
 
   const [inputValue, setInputValue] = useState("");
-  if (!inputValue) return;
+  if (!inputValue && CvState === "viewing") return;
 
   return (
     <div className="form-input">
