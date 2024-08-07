@@ -1,9 +1,9 @@
-import FormSection from "./FormSection";
+import Experiences from "./Experiences";
 import FormInput from "./FormInput";
 
 export default function EducationalExperience() {
   return (
-    <FormSection title="educational experience">
+    <Experiences title="educational experience">
       <FormInput
         id="study-end"
         label="end of study"
@@ -16,6 +16,6 @@ export default function EducationalExperience() {
         placeholder="Hogwarts School of Witchcraft and Wizardry"
       />
       <FormInput id="study-title" label="title of study" placeholder="Ph.D" />
-    </FormSection>
+    </Experiences>
   );
 }

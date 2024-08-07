@@ -18,7 +18,10 @@ export default function FormInput({
   if (!inputValue && CvState === "viewing") return;
 
   return (
-    <div className="form-input" id={CvState === "viewing" && id}>
+    <div
+      className="form-input"
+      id={CvState === "viewing" ? id + crypto.randomUUID() : undefined}
+    >
       {CvState !== "viewing" && (
         <label htmlFor={id}>
           {label}

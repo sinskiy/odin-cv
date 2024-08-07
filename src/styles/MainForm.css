@@ -2,6 +2,14 @@
   padding: 2rem;
 }
 
+.editing section + button {
+  margin-bottom: 4rem;
+}
+
+.editing .general-information {
+  margin-bottom: 4rem;
+}
+
 .viewing h2 {
   background-color: var(--surface);
   padding: 1rem 0;
@@ -31,7 +39,7 @@
   row-gap: 1rem;
 }
 
-.viewing #name {
+.viewing [id^="name"] {
   grid-column: 1 / -1;
 }
 
@@ -49,7 +57,7 @@
   display: none;
 }
 
-.viewing #name p {
+.viewing [id^="name"] p {
   font-size: 3rem;
 }
 
@@ -65,20 +73,25 @@
 .viewing .practical-experience fieldset {
   grid-template-rows: repeat(3, auto);
 }
-.viewing #study-end {
+.viewing [id^="study-end"] {
   grid-row: 1 / -1;
 }
-.viewing #end-date {
+.viewing [id^="end-date"] {
   grid-column: 1 / 2;
   grid-row: 2 / -1;
 }
 
-.viewing #company-name p,
-.viewing #school-name p {
+.viewing [id^="company-name"] p,
+.viewing [id^="school-name"] p {
   font-size: 3rem;
 }
 
-.viewing #position-title p,
-.viewing #study-title p {
+.viewing [id^="position-title"] p,
+.viewing [id^="study-title"] p {
   font-size: 2rem;
+}
+
+.viewing header button,
+.viewing > button {
+  display: none;
 }
