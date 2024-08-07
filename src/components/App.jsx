@@ -1,9 +1,8 @@
 import MainForm from "./MainForm";
-import "../styles/App.css";
 
 function App() {
   return (
-    <main>
+    <main style={{ margin: "1rem" }}>
       <MainForm />
     </main>
   );

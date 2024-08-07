@@ -5,7 +5,7 @@ export default function GeneralInformation() {
   return (
     <FormSection
       title="general information"
-      legendlabel="required inputs have * at the end"
+      legendText="required inputs have * at the end"
     >
       <FormInput id="name" required={true} placeholder="John Doe" />
       <FormInput
