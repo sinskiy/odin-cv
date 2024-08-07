@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { CvStateContext } from "./CvStateContext";
+import { CvStateContext } from "../CvStateContext";
 
 export default function FormSection({ title, legendText, children }) {
   const CvState = useContext(CvStateContext);

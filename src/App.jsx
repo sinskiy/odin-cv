@@ -1,5 +1,4 @@
-import "./App.css";
-import MainForm from "./MainForm";
+import MainForm from "./components/MainForm";
 
 function App() {
   return (

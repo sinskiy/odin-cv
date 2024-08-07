@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CvStateContext, DEFAULT_CV_STATE } from "./CvStateContext";
+import { CvStateContext, DEFAULT_CV_STATE } from "../CvStateContext";
 
 import EducationalExperience from "./EducationalExperience";
 import GeneralInformation from "./GeneralInformation";

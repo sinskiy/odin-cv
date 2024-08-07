@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CvStateContext } from "./CvStateContext";
+import { CvStateContext } from "../CvStateContext";
 
 export default function FormInput({
   id,

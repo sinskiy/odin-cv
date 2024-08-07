@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CvStateContext } from "./CvStateContext";
+import { CvStateContext } from "../CvStateContext";
 
 export default function MainFormControls() {
   const CvState = useContext(CvStateContext);
