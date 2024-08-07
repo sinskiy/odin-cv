@@ -1,0 +1,84 @@
+.editing {
+  padding: 2rem;
+}
+
+.viewing h2 {
+  background-color: var(--surface);
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.viewing fieldset {
+  margin: auto;
+  max-width: fit-content;
+}
+
+.viewing .general-information {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  margin-bottom: 4rem;
+}
+
+.viewing .general-information fieldset {
+  display: grid !important;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.viewing #name {
+  grid-column: 1 / -1;
+}
+
+.viewing .general-information h2 {
+  display: none;
+}
+
+.viewing .text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.viewing input[type="checkbox"] {
+  display: none;
+}
+
+.viewing #name p {
+  font-size: 3rem;
+}
+
+.viewing .educational-experience fieldset,
+.viewing .practical-experience fieldset {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+.viewing .educational-experience fieldset {
+  grid-template-rows: repeat(2, auto);
+}
+.viewing .practical-experience fieldset {
+  grid-template-rows: repeat(3, auto);
+}
+.viewing #study-end {
+  grid-row: 1 / -1;
+}
+.viewing #end-date {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+}
+
+.viewing #company-name p,
+.viewing #school-name p {
+  font-size: 3rem;
+}
+
+.viewing #position-title p,
+.viewing #study-title p {
+  font-size: 2rem;
+}

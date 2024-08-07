@@ -10,6 +10,10 @@
   margin-bottom: 1rem;
 }
 
+.form-input p {
+  font-size: 1.5rem;
+}
+
 .form-input label {
   font-weight: 500;
   font-size: 0.875rem;

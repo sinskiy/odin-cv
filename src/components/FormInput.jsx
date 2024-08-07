@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { CvStateContext } from "../CvStateContext";
 import "../styles/FormInput.css";
+import EmailIcon from "../icons/EmailIcon";
+import PhoneIcon from "../icons/PhoneIcon";
 
 export default function FormInput({
   id,
@@ -16,15 +18,17 @@ export default function FormInput({
   if (!inputValue && CvState === "viewing") return;
 
   return (
-    <div className="form-input">
-      <label htmlFor={id}>
-        {label}
-        {CvState === "editing" && required && (
-          <span>
-            <strong aria-label="required">*</strong>
-          </span>
-        )}
-      </label>
+    <div className="form-input" id={CvState === "viewing" && id}>
+      {CvState !== "viewing" && (
+        <label htmlFor={id}>
+          {label}
+          {CvState === "editing" && required && (
+            <span>
+              <strong aria-label="required">*</strong>
+            </span>
+          )}
+        </label>
+      )}
       {CvState === "editing" ? (
         <input
           value={inputValue}
@@ -37,7 +41,20 @@ export default function FormInput({
           {...inputAttributes}
         />
       ) : (
-        <div>{inputValue}</div>
+        <div className="text">
+          {id === "email" && <EmailIcon />}
+          {id === "phone" && <PhoneIcon />}
+          <p>
+            {type === "date"
+              ? new Date(inputValue).toLocaleDateString()
+              : inputValue}
+            {id.includes("start") && (
+              <>
+                <br />-
+              </>
+            )}
+          </p>
+        </div>
       )}
     </div>
   );
