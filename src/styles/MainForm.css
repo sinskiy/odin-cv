@@ -96,6 +96,6 @@
 }
 
 .viewing header button,
-.viewing > button {
+.viewing div button {
   display: none;
 }

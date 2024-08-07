@@ -3,7 +3,6 @@ import FormSection from "./FormSection";
 
 export default function Experiences({ title, legendText, children }) {
   const [length, setLength] = useState(0);
-  console.log(length);
   return (
     <>
       <section>

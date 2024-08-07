@@ -24,7 +24,7 @@ export default function FormSection({
               marginBottom: legendDisplayed ? "0" : "1rem",
             }}
           >
-            <h2 className={!displayTitle && "hidden-title"}>
+            <h2 className={!displayTitle ? "hidden-title" : undefined}>
               {sectionDisplayed && displayTitle && title}
             </h2>
             {action === "delete" && (

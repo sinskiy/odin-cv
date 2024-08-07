@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CvStateContext } from "../CvStateContext";
+import { jsPDF } from "jspdf";
 
 export default function MainFormControls() {
   const CvState = useContext(CvStateContext);
@@ -15,6 +16,18 @@ export default function MainFormControls() {
       </button>
       <button type="reset" onClick={() => window.location.reload()}>
         reset
+      </button>
+      <button
+        type="button"
+        disabled={CvState === "editing"}
+        onClick={async () => {
+          const format = new jsPDF();
+          format.html(document.querySelector("#cv"), {
+            callback: (pdf) => console.log(pdf.autoPrint()),
+          });
+        }}
+      >
+        download PDF
       </button>
     </section>
   );

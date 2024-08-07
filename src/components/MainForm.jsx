@@ -20,9 +20,11 @@ export default function MainForm() {
       className={CvState}
     >
       <CvStateContext.Provider value={CvState}>
-        <GeneralInformation />
-        <EducationalExperience />
-        <PracticalExperience />
+        <div id="cv">
+          <GeneralInformation />
+          <EducationalExperience />
+          <PracticalExperience />
+        </div>
         <MainFormControls />
       </CvStateContext.Provider>
     </form>
