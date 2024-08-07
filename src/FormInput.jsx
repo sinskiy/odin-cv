@@ -1,3 +1,6 @@
+import { useContext, useState } from "react";
+import { CvStateContext } from "./CvStateContext";
+
 export default function FormInput({
   id,
   label = id,
@@ -6,6 +9,11 @@ export default function FormInput({
   placeholder,
   ...inputAttributes
 }) {
+  const CvState = useContext(CvStateContext);
+
+  const [inputValue, setInputValue] = useState("");
+  if (!inputValue) return;
+
   return (
     <div className="form-input">
       <label htmlFor={id}>
@@ -16,14 +24,20 @@ export default function FormInput({
           </span>
         )}
       </label>
-      <input
-        type={type}
-        name={id}
-        id={id}
-        placeholder={placeholder}
-        required={required}
-        {...inputAttributes}
-      />
+      {CvState === "editing" ? (
+        <input
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          type={type}
+          name={id}
+          id={id}
+          placeholder={placeholder}
+          required={required}
+          {...inputAttributes}
+        />
+      ) : (
+        <div>{inputValue}</div>
+      )}
     </div>
   );
 }
