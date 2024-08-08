@@ -1,0 +1,13 @@
+.resume-form-category {
+  background-color: antiquewhite;
+  padding: 1rem;
+}
+
+.resume-form-category summary {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.resume-form-category .details-content {
+  margin-top: 1rem;
+}

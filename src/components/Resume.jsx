@@ -1,21 +1,25 @@
 import "../styles/Resume.css";
 import MonthYear from "./MonthYear";
 
-export default function Resume({ title, additional, work, education }) {
+export default function Resume({
+  generalInformation: { title, ...additional },
+  work,
+  education,
+}) {
   return (
     <section className="a4 resume">
       <h1>{title}</h1>
       <ul aria-description="additional info" className="additional">
         {/* TODO: move to object and add svg */}
-        {additional.map((info) => (
-          <li>{info}</li>
+        {Object.entries(additional).map(([name, value]) => (
+          <li key={name}>{value}</li>
         ))}
       </ul>
       <section aria-labelledby="work" className="work-section">
         <h2 id="work">work</h2>
         <ul className="work-list">
           {work.map((job) => (
-            <li>
+            <li key={`${job.company}-${job.title}`}>
               <h3>
                 <span className="company">{job.company}</span> - {job.title}
               </h3>
@@ -30,15 +34,17 @@ export default function Resume({ title, additional, work, education }) {
       <section aria-labelledby="education" className="education-section">
         <h2 id="education">education</h2>
         <ul className="work-list">
-          {education.map((institution) => (
-            <li>
+          {education.map((educationEntry) => (
+            <li key={`${educationEntry.institution}-${educationEntry.title}`}>
               <h3>
-                <span className="institution">{institution.name}</span> -{" "}
-                {institution.title}
+                <span className="institution">
+                  {educationEntry.institution}
+                </span>{" "}
+                - {educationEntry.title}
               </h3>
               <p>
-                <MonthYear time={institution.start} /> -{" "}
-                <MonthYear time={institution.end} />
+                <MonthYear time={educationEntry.start} /> -{" "}
+                <MonthYear time={educationEntry.end} />
               </p>
             </li>
           ))}

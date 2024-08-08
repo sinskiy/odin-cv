@@ -1,12 +1,24 @@
-import GeneralInformation from "./GeneralInformation";
+import "../styles/ResumeForm.css";
+import ResumeFormCategory from "./ResumeFormCategory";
+import ResumeFormCategoryEntries from "./ResumeFormCategoryEntries";
+import ResumeFormEntry from "./ResumeFormEntry";
 
-export default function ResumeForm() {
-  return (
-    <section
-      className="resume-form"
-      style={{ backgroundColor: "aquamarine", flexGrow: 1 }}
-    >
-      <GeneralInformation />
-    </section>
+export default function ResumeForm({ ...resume }) {
+  const categories = Object.entries(resume).map(
+    ([categoryTitle, categoryOrFormEntries], i) =>
+      Array.isArray(categoryOrFormEntries) ? (
+        <ResumeFormCategoryEntries
+          key={i}
+          title={categoryTitle}
+          entries={categoryOrFormEntries}
+        />
+      ) : (
+        <ResumeFormCategory
+          key={i}
+          title={categoryTitle}
+          formEntries={categoryOrFormEntries}
+        />
+      ),
   );
+  return <section className="resume-form">{categories}</section>;
 }
