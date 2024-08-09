@@ -19,8 +19,8 @@ export default function Resume({
       <section aria-labelledby="work" className="work-section">
         <h2 id="work">work</h2>
         <ul className="work-list">
-          {work.map((job) => (
-            <li key={`${job.company}-${job.title}`}>
+          {work.map((job, i) => (
+            <li key={i}>
               <h3>
                 <span className="company">{job.company}</span> - {job.title}
               </h3>
@@ -35,8 +35,8 @@ export default function Resume({
       <section aria-labelledby="education" className="education-section">
         <h2 id="education">education</h2>
         <ul className="work-list">
-          {education.map((educationEntry) => (
-            <li key={`${educationEntry.institution}-${educationEntry.title}`}>
+          {education.map((educationEntry, i) => (
+            <li key={i}>
               <h3>
                 <span className="institution">
                   {educationEntry.institution}

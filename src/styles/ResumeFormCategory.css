@@ -1,7 +1,8 @@
 .resume-form-category {
-  background-color: var(--surface);
   padding: 1.5rem;
 
+  margin-bottom: 1rem;
+  background-color: var(--surface);
   border-radius: calc(var(--rounded-card) + 1rem);
 }
 
