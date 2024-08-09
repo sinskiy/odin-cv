@@ -1,7 +1,6 @@
 import "../styles/ResumeForm.css";
 import ResumeFormCategory from "./ResumeFormCategory";
 import ResumeFormCategoryEntries from "./ResumeFormCategoryEntries";
-import ResumeFormEntry from "./ResumeFormEntry";
 
 export default function ResumeForm({ ...resume }) {
   const categories = Object.entries(resume).map(

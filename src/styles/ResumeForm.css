@@ -1,4 +1,7 @@
 .resume-form {
-  flex-grow: 1;
-  color: black;
+  flex: 1 0 0%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

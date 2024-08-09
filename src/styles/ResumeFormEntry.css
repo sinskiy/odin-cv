@@ -2,7 +2,7 @@
   color: var(--error);
 }
 
-.form-input {
+.form-entry {
   display: flex;
   flex-direction: column;
   row-gap: 0.25rem;
@@ -10,11 +10,7 @@
   margin-bottom: 1rem;
 }
 
-.form-input p {
-  font-size: 1.5rem;
-}
-
-.form-input label {
+.form-entry label {
   font-weight: 500;
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
@@ -22,7 +18,7 @@
   color: var(--text-variation);
 }
 
-.form-input input {
+.form-entry input {
   border: none;
   padding-left: 1.5rem;
   height: 3rem;
@@ -35,6 +31,6 @@
 
   min-width: 0;
 }
-.form-input input:focus {
+.form-entry input:focus {
   outline: 2px solid var(--primary);
 }

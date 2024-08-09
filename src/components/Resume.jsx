@@ -6,6 +6,7 @@ export default function Resume({
   work,
   education,
 }) {
+  // TODO: break into multiple components
   return (
     <section className="a4 resume">
       <h1>{title}</h1>
