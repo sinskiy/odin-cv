@@ -1,7 +1,12 @@
 import "../styles/ResumeFormCategory.css";
 import ResumeFormEntry from "./ResumeFormEntry";
 
-export default function ResumeFormCategory({ title, formEntries }) {
+export default function ResumeFormCategory({
+  handleInputChange,
+  title,
+  index,
+  formEntries,
+}) {
   return (
     <article className="resume-form-category">
       <details>
@@ -11,8 +16,17 @@ export default function ResumeFormCategory({ title, formEntries }) {
             ([formEntryTitle, formEntryValue]) => (
               <ResumeFormEntry
                 key={formEntryTitle}
+                categoryTitle={title}
                 label={formEntryTitle}
-                type={typeof formEntryValue === "string" ? "text" : "date"}
+                value={formEntryValue}
+                index={index}
+                handleInputChange={handleInputChange}
+                type={
+                  formEntryTitle.includes("start") ||
+                  formEntryTitle.includes("end")
+                    ? "date"
+                    : "text"
+                }
               />
             ),
           )}

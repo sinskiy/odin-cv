@@ -20,6 +20,7 @@ export default function Resume({
         <h2 id="work">work</h2>
         <ul className="work-list">
           {work.map((job, i) => (
+            //  TODO: improve key (I'll add ability for section to be deleted)
             <li key={i}>
               <h3>
                 <span className="company">{job.company}</span> - {job.title}
@@ -36,6 +37,7 @@ export default function Resume({
         <h2 id="education">education</h2>
         <ul className="work-list">
           {education.map((educationEntry, i) => (
+            //  TODO: improve key (I'll add ability for section to be deleted)
             <li key={i}>
               <h3>
                 <span className="institution">
