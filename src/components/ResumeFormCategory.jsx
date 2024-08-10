@@ -33,12 +33,7 @@ export default function ResumeFormCategory({
                 value={formEntryValue}
                 index={index}
                 handleInputChange={handleInputChange}
-                type={
-                  formEntryTitle.includes("start") ||
-                  formEntryTitle.includes("end")
-                    ? "date"
-                    : "text"
-                }
+                type="string"
               />
             ),
           )}

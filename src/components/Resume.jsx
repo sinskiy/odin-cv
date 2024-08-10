@@ -1,5 +1,4 @@
 import "../styles/Resume.css";
-import MonthYear from "./MonthYear";
 import ResumeSection from "./ResumeSection";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -9,7 +8,7 @@ export default function Resume({
   education,
 }) {
   return (
-    <section className="a4 resume">
+    <section className="a4 resume" aria-live="polite">
       <header>
         <h1>{title}</h1>
         <ul aria-description="additional info" className="additional">
@@ -32,7 +31,7 @@ export default function Resume({
                 <span className="company">{job.company}</span> - {job.title}
               </h3>
               <p>
-                <MonthYear time={job.start} /> - <MonthYear time={job.end} />
+                {job.start} - {job.end}
               </p>
               <p>{job.description}</p>
             </li>
@@ -50,8 +49,7 @@ export default function Resume({
                 - {educationEntry.title}
               </h3>
               <p>
-                <MonthYear time={educationEntry.start} /> -{" "}
-                <MonthYear time={educationEntry.end} />
+                {educationEntry.start} - {educationEntry.end}
               </p>
             </li>
           ))}

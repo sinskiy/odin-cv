@@ -17,22 +17,22 @@ export const baseResume = {
       company: "Twentieth Century Motor Company",
       description:
         "Designed a revolutionary new motor powered by ambient static electricity.",
-      start: new Date("1 March, 1921"),
-      end: new Date("1 March, 1928"),
+      start: "March, 1921",
+      end: "1 March, 1928",
     },
   ],
   education: [
     {
       institution: "Patrick Henry University",
       title: "Bachelor of Physics",
-      start: new Date("1 September, 1915"),
-      end: new Date("1 May, 1921"),
+      start: "September, 1915",
+      end: "May, 1921",
     },
     {
       institution: "Patrick Henry University",
       title: "Bachelor of Philosophy",
-      start: new Date("1 September, 1915"),
-      end: new Date("1 May, 1921"),
+      start: "September, 1915",
+      end: "1 May, 1921",
     },
   ],
 };

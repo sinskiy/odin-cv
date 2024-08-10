@@ -18,9 +18,7 @@ export default function ResumeFormCategoryEntries({
   function handleAddCategory() {
     const empty = { ...baseResume[title][0] };
     for (const baseFormEntry in empty) {
-      const curr = empty[baseFormEntry];
-      const currType = typeof empty[baseFormEntry];
-      empty[baseFormEntry] = currType === "string" ? "" : new Date(0);
+      empty[baseFormEntry] = "";
     }
     resume[title].push(empty);
     setResume(resume);
