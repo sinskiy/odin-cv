@@ -15,6 +15,16 @@ export default function ResumeFormCategoryEntries({
       .concat(resume[title].slice(index + 1));
     setResume(resume);
   }
+  function handleAddCategory() {
+    const empty = { ...baseResume[title][0] };
+    for (const baseFormEntry in empty) {
+      const curr = empty[baseFormEntry];
+      const currType = typeof empty[baseFormEntry];
+      empty[baseFormEntry] = currType === "string" ? "" : new Date(0);
+    }
+    resume[title].push(empty);
+    setResume(resume);
+  }
   return (
     <div>
       {entries.map((category, i) => (
@@ -27,12 +37,7 @@ export default function ResumeFormCategoryEntries({
           formEntries={category}
         />
       ))}
-      <button
-        className="styled"
-        onClick={() =>
-          setResume({ ...resume, [title]: [...resume[title], ...baseEntry] })
-        }
-      >
+      <button className="styled" onClick={handleAddCategory}>
         Add {title} section
       </button>
     </div>
