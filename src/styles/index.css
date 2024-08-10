@@ -87,6 +87,9 @@ fieldset {
 
 .a4 {
   aspect-ratio: 100 / 141;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-start;
 }
 
 @media screen and (prefers-color-scheme: dark) {

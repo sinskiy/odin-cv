@@ -14,13 +14,15 @@ export default function ResumeFormCategory({
       <details>
         <summary>
           {title}
-          {index !== undefined && (
-            <button aria-label="delete category">
-              <Trash2 onClick={() => handleDeleteCategory(title, index)} />
-            </button>
-          )}
+          <nav>
+            {index !== undefined && (
+              <button aria-label="delete category">
+                <Trash2 onClick={() => handleDeleteCategory(title, index)} />
+              </button>
+            )}
+          </nav>
         </summary>
-        <div className="details-content">
+        <main>
           {Object.entries(formEntries).map(
             ([formEntryTitle, formEntryValue]) => (
               <ResumeFormEntry
@@ -39,7 +41,7 @@ export default function ResumeFormCategory({
               />
             ),
           )}
-        </div>
+        </main>
       </details>
     </article>
   );

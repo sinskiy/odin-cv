@@ -8,7 +8,6 @@ export default function ResumeFormCategoryEntries({
   title,
   entries,
 }) {
-  console.log(entries.length, entries);
   const baseEntry = baseResume[title];
   function handleDeleteCategory(title, index) {
     resume[title] = resume[title]

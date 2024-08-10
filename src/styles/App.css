@@ -1,4 +1,4 @@
-main {
+#root > main {
   display: flex;
   gap: 1rem;
   margin: auto;
@@ -7,7 +7,7 @@ main {
 }
 
 @media (min-width: 1600px) {
-  main {
+  #root > main {
     padding: 2rem 24rem;
   }
 }
