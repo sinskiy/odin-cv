@@ -9,12 +9,13 @@ export default function ResumeFormEntry({
   type,
   ...inputAttributes
 }) {
+  const id = `${categoryTitle}-${label}-${index}`;
   return (
     <div className="form-entry">
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <input
         type={type}
-        id={label}
+        id={id}
         name={label}
         value={value}
         onChange={(e) => handleInputChange(e, categoryTitle, index, label)}
