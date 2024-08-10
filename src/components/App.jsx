@@ -5,27 +5,34 @@ import { useState } from "react";
 
 export const baseResume = {
   generalInformation: {
-    title: "",
-    email: "",
-    phone: "",
-    location: "",
-    github: "",
+    title: "John Galt",
+    email: "main@johngalt.website",
+    phone: "+7 (800) 555-35-35",
+    location: "Columbus, Ohio, USA",
+    github: "@johngalt",
   },
   work: [
     {
-      title: "",
-      company: "",
-      description: "",
-      start: new Date(0),
-      end: "present",
+      title: "Inventor",
+      company: "Twentieth Century Motor Company",
+      description:
+        "Designed a revolutionary new motor powered by ambient static electricity.",
+      start: new Date("1 March, 1921"),
+      end: new Date("1 March, 1928"),
     },
   ],
   education: [
     {
-      institution: "",
-      title: "",
-      start: new Date(0),
-      end: "present",
+      institution: "Patrick Henry University",
+      title: "Bachelor of Physics",
+      start: new Date("1 September, 1915"),
+      end: new Date("1 May, 1921"),
+    },
+    {
+      institution: "Patrick Henry University",
+      title: "Bachelor of Philosophy",
+      start: new Date("1 September, 1915"),
+      end: new Date("1 May, 1921"),
     },
   ],
 };
