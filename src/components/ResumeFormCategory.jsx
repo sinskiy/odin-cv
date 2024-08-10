@@ -9,11 +9,12 @@ export default function ResumeFormCategory({
   handleDeleteCategory,
   formEntries,
 }) {
+  const humanTitle = toCapitalizedWords(title);
   return (
     <article className="resume-form-category">
       <details>
-        <summary>
-          {title}
+        <summary style={{ textTransform: "capitalize" }}>
+          {humanTitle}
           <nav>
             {index !== undefined && (
               <button aria-label="delete category">
@@ -45,4 +46,10 @@ export default function ResumeFormCategory({
       </details>
     </article>
   );
+}
+
+function toCapitalizedWords(name) {
+  var words = name.match(/[A-Za-z][a-z]*/g) || [];
+
+  return words.join(" ");
 }
