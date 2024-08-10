@@ -1,26 +1,26 @@
 import "../styles/Resume.css";
 import MonthYear from "./MonthYear";
+import ResumeSection from "./ResumeSection";
 
 export default function Resume({
   generalInformation: { title, ...additional },
   work,
   education,
 }) {
-  // TODO: break into multiple components
   return (
     <section className="a4 resume">
-      <h1>{title}</h1>
-      <ul aria-description="additional info" className="additional">
-        {/* TODO: move to object and add svg */}
-        {Object.entries(additional).map(([name, value]) => (
-          <li key={name}>{value}</li>
-        ))}
-      </ul>
-      <section aria-labelledby="work" className="work-section">
-        <h2 id="work">work</h2>
+      <header>
+        <h1>{title}</h1>
+        <ul aria-description="additional info" className="additional">
+          {/* TODO: add svg */}
+          {Object.entries(additional).map(([name, value]) => (
+            <li key={name}>{value}</li>
+          ))}
+        </ul>
+      </header>
+      <ResumeSection title="work">
         <ul className="work-list">
           {work.map((job, i) => (
-            //  TODO: improve key (I'll add ability for section to be deleted)
             <li key={i}>
               <h3>
                 <span className="company">{job.company}</span> - {job.title}
@@ -32,12 +32,10 @@ export default function Resume({
             </li>
           ))}
         </ul>
-      </section>
-      <section aria-labelledby="education" className="education-section">
-        <h2 id="education">education</h2>
+      </ResumeSection>
+      <ResumeSection title="education">
         <ul className="work-list">
           {education.map((educationEntry, i) => (
-            //  TODO: improve key (I'll add ability for section to be deleted)
             <li key={i}>
               <h3>
                 <span className="institution">
@@ -52,7 +50,7 @@ export default function Resume({
             </li>
           ))}
         </ul>
-      </section>
+      </ResumeSection>
     </section>
   );
 }
