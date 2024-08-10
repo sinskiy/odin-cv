@@ -24,7 +24,6 @@
   font-size: 1.25rem;
 }
 
-/* TODO: calculate with JS to make always the same amount of items on each row */
 .resume .additional li {
   width: calc(50% - 1rem);
 
