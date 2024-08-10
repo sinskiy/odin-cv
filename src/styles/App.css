@@ -6,8 +6,16 @@
   padding: 2rem;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1700px) {
   #root > main {
     padding: 2rem 24rem;
+  }
+}
+@media (max-width: 1000px) {
+  #root > main {
+    flex-direction: column;
+  }
+  .a4 {
+    aspect-ratio: auto !important;
   }
 }

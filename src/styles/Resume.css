@@ -20,13 +20,12 @@
 .resume .additional {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
   font-size: 1.25rem;
 }
 
 .resume .additional li {
-  width: calc(50% - 1rem);
-
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -56,4 +55,13 @@
 .resume .company,
 .resume .institution {
   font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+  .resume .additional {
+    column-gap: 0.5rem;
+  }
+  .resume .additional li {
+    width: calc(50% - 1rem);
+  }
 }
