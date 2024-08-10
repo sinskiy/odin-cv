@@ -8,7 +8,14 @@ export default function ResumeFormCategoryEntries({
   title,
   entries,
 }) {
+  console.log(entries.length, entries);
   const baseEntry = baseResume[title];
+  function handleDeleteCategory(title, index) {
+    resume[title] = resume[title]
+      .slice(0, index)
+      .concat(resume[title].slice(index + 1));
+    setResume(resume);
+  }
   return (
     <div>
       {entries.map((category, i) => (
@@ -16,16 +23,18 @@ export default function ResumeFormCategoryEntries({
           key={i}
           handleInputChange={handleInputChange}
           title={title}
-          formEntries={category}
           index={i}
+          handleDeleteCategory={handleDeleteCategory}
+          formEntries={category}
         />
       ))}
       <button
+        className="styled"
         onClick={() =>
           setResume({ ...resume, [title]: [...resume[title], ...baseEntry] })
         }
       >
-        Add new
+        Add {title} section
       </button>
     </div>
   );

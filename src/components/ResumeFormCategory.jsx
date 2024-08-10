@@ -1,3 +1,4 @@
+import { Trash2 } from "lucide-react";
 import "../styles/ResumeFormCategory.css";
 import ResumeFormEntry from "./ResumeFormEntry";
 
@@ -5,12 +6,20 @@ export default function ResumeFormCategory({
   handleInputChange,
   title,
   index,
+  handleDeleteCategory,
   formEntries,
 }) {
   return (
     <article className="resume-form-category">
       <details>
-        <summary>{title}</summary>
+        <summary>
+          {title}
+          {index !== undefined && (
+            <button aria-label="delete category">
+              <Trash2 onClick={() => handleDeleteCategory(title, index)} />
+            </button>
+          )}
+        </summary>
         <div className="details-content">
           {Object.entries(formEntries).map(
             ([formEntryTitle, formEntryValue]) => (

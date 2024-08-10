@@ -43,14 +43,9 @@ ul {
 }
 
 button {
-  width: 100%;
-  padding: 1rem 4rem;
+  background-color: transparent;
+  color: inherit;
   border: none;
-
-  border-radius: var(--rounded);
-  background-color: var(--primary);
-
-  color: var(--on-primary);
   font-weight: 500;
   font-size: 0.875rem;
 
@@ -68,6 +63,15 @@ button:hover {
 }
 button:active {
   transform: scale(0.95);
+}
+button.styled {
+  width: 100%;
+  padding: 1rem 4rem;
+
+  border-radius: var(--rounded);
+  background-color: var(--primary);
+
+  color: var(--on-primary);
 }
 
 input[type="checkbox"] {
