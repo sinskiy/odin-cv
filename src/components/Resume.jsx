@@ -1,6 +1,9 @@
 import "../styles/Resume.css";
 import MonthYear from "./MonthYear";
 import ResumeSection from "./ResumeSection";
+import { Mail, Phone, MapPin, Github } from "lucide-react";
+
+// TODO: move to bottom
 
 export default function Resume({
   generalInformation: { title, ...additional },
@@ -12,10 +15,15 @@ export default function Resume({
       <header>
         <h1>{title}</h1>
         <ul aria-description="additional info" className="additional">
-          {/* TODO: add svg */}
-          {Object.entries(additional).map(([name, value]) => (
-            <li key={name}>{value}</li>
-          ))}
+          {Object.entries(additional).map(
+            ([name, value]) =>
+              value && (
+                <li key={name}>
+                  {resumeIcons[name]}
+                  {value}
+                </li>
+              ),
+          )}
         </ul>
       </header>
       <ResumeSection title="work">
@@ -54,3 +62,10 @@ export default function Resume({
     </section>
   );
 }
+
+const resumeIcons = {
+  github: <Github />,
+  email: <Mail />,
+  phone: <Phone />,
+  location: <MapPin />,
+};

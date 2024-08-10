@@ -27,6 +27,10 @@
 /* TODO: calculate with JS to make always the same amount of items on each row */
 .resume .additional li {
   width: calc(50% - 1rem);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .resume section {
